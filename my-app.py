@@ -6,8 +6,12 @@ def setup():
     
 def draw():
     background(255)
-    textSize(50)
+    textSize(48)
     text("The Impossible Trivia: ", 50, 200)
     fill(0)
     textSize(40)
     text("Slang, Food, and Music", 80, 300)
+    fill(30)
+    textSize(16)
+    text("Click anywhere to start",211,500)
+     
