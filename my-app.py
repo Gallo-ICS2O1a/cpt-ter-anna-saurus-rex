@@ -15,3 +15,21 @@ def draw():
     textSize(16)
     text("Click anywhere to start",211,500)
      
+        
+            
+def draw():
+    background(255)
+    textSize(30)
+    fill(172, 83, 83)
+    text("How many Grammys did Kanye earn? ", 50, 200)
+    fill(0, 0, 255)
+    textSize(50)
+    text("24    13     15     21", 80, 300)
+    fill(255, 77, 77)
+    textSize(16)
+    text("The correct answer is...21!",211,500)
+    rect(352,305,55,55)
+    rect(217,305,55,55)
+    rect(83,305,55,55)
+    rect(500,305,55,55)
+    
