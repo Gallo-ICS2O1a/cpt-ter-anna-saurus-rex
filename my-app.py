@@ -33,3 +33,26 @@ def draw():
     rect(83,305,55,55)
     rect(500,305,55,55)
     
+    
+    
+def setup():
+    size(600, 600)
+    
+def draw():
+    background(255)
+    textSize(30)
+    fill(172, 83, 83)
+    text("What's The Weeknd's last name? ", 50, 200)
+    fill(0, 0, 255)
+    textSize(30)
+    text("Tisfaye  Tesfaye  Sunday      Abel", 80, 300)
+    fill(255, 77, 77)
+    textSize(16)
+    text("The correct answer is...Tesfaye!",211,500)
+    rect(352,305,55,55)
+    rect(217,305,55,55)
+    rect(83,305,55,55)
+    rect(500,305,55,55)
+
+     
+    
