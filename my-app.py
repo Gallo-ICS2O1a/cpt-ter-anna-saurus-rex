@@ -1,5 +1,8 @@
 # Template for Processing sketches.
 scene = 1
+guess = 0
+restart = 1
+percentage = guess/restart * 100
 def setup():
     size(600, 600)
     
@@ -25,17 +28,30 @@ def mousePressed():
         fill(0, 0, 255)
         textSize(50)
         text("24    13     15     21", 80, 300)
-        fill(255, 77, 77)
-        textSize(16)
-        rect(352,305,55,55)
-        rect(217,305,55,55)
-        rect(83,305,55,55)
-        rect(500,305,55,55)
+        fill(0, 0, 255)
+        textSize(50)
+        text("13", 207, 300)
+        fill(0, 0, 255)
+        textSize(50)
+        text("15", 344, 300)
+        fill(0, 0, 255)
+        textSize(50)
+        text("21", 476, 300)
+        rect(330, 305, 60, 80)
+        rect(193, 305, 60, 80)
+        rect(66, 305, 60, 80)
+        rect(462, 305, 60, 80)
+        
+def mousePressed():
+    if mouseButton == rect(66, 305, 60, 80):
+        guess += 1
 def mousePressed():
     global scene
     scene += 1 
     if scene == 3:
-        text("The correct answer is.... 21!")
+        fill(255, 77, 77)
+        textSize(16)
+        text("The correct answer is.... 21!", 50, 500)
     
 def mousePressed():
     global scene 
@@ -47,14 +63,30 @@ def mousePressed():
         text("What's The Weeknd's last name? ", 50, 200)
         fill(0, 0, 255)
         textSize(30)
-        text("Tisfaye  Tesfaye  Sunday      Abel", 80, 300)
+        text("Tisfaye", 50, 300)
+        fill(0, 0, 255)
+        textSize(30)
+        text("Tesfaye", 177, 300)
+        fill(0, 0, 255)
+        textSize(30)
+        text("Sunday", 314, 300)
+        fill(0, 0, 255)
+        textSize(30)
+        text("Abel", 460, 300)
+        rect(330, 305, 60, 80)
+        rect(193, 305, 60, 80)
+        rect(66, 305, 60, 80)
+        rect(462, 305, 60, 80)
+    
+def mousePressed():
+    global scene
+    scene += 1 
+    if scene == 5:
         fill(255, 77, 77)
         textSize(16)
-        text("The correct answer is...Tesfaye!",211,500)
-        rect(352,305,55,55)
-        rect(217,305,55,55)
-        rect(83,305,55,55)
-        rect(500,305,55,55)
+        text("The correct answer is...Tesfaye!", 190, 500)
+        
+        restart += 1
 
      
     
