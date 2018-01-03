@@ -27,35 +27,30 @@ def mousePressed():
         text("How many Grammys did Kanye earn? ", 50, 200)
         fill(0, 0, 255)
         textSize(50)
-        text("24    13     15     21", 80, 300)
+        text("24", 68, 300)
         fill(0, 0, 255)
         textSize(50)
-        text("13", 207, 300)
+        text("13", 190, 300)
         fill(0, 0, 255)
         textSize(50)
-        text("15", 344, 300)
+        text("15", 330, 300)
         fill(0, 0, 255)
         textSize(50)
-        text("21", 476, 300)
+        text("21", 465, 300)
         rect(330, 305, 60, 80)
         rect(193, 305, 60, 80)
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
         
-def mousePressed():
     if mouseButton == rect(66, 305, 60, 80):
         guess += 1
-def mousePressed():
-    global scene
-    scene += 1 
+
+    
     if scene == 3:
         fill(255, 77, 77)
         textSize(16)
         text("The correct answer is.... 21!", 50, 500)
     
-def mousePressed():
-    global scene 
-    scene += 1 
     if scene == 4:
         background(255)
         textSize(30)
@@ -78,15 +73,10 @@ def mousePressed():
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
     
-def mousePressed():
-    global scene
-    scene += 1 
     if scene == 5:
         fill(255, 77, 77)
         textSize(16)
         text("The correct answer is...Tesfaye!", 190, 500)
-        
-        restart += 1
 
      
     
