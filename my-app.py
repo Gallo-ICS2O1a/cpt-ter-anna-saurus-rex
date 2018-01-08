@@ -41,10 +41,6 @@ def mousePressed():
         rect(193, 305, 60, 80)
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
-        
-    if mouseButton == rect(66, 305, 60, 80):
-        guess += 1
-
     
     if scene == 3:
         fill(255, 77, 77)
@@ -77,6 +73,24 @@ def mousePressed():
         fill(255, 77, 77)
         textSize(16)
         text("The correct answer is...Tesfaye!", 190, 500)
+        
+    if scene == 6:
+        background(255)
+        textSize(18)
+        fill(172, 83, 83)
+        text("How many McDonald's are there in Canada as of 2014?", 50, 200)
+        fill(0, 0, 255)
+        textSize(30)
+        text("5000      1400       2400       2500", 80, 300)
+        rect(352, 305, 60, 80)
+        rect(217, 305, 60, 80)
+        rect(83, 305, 60, 80)
+        rect(500, 305, 60, 80)
+        
+    if scene == 7:
+        fill(255, 77, 77)
+        textSize(16)
+        text("The correct answer is...1400!", 211, 500)
 
      
     
