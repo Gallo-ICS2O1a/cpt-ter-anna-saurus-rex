@@ -91,6 +91,50 @@ def mousePressed():
         fill(255, 77, 77)
         textSize(16)
         text("The correct answer is...1400!", 211, 500)
+        
+    if scene == 8:
+        background(255)
+        textSize(30)
+        fill(172, 83, 83)
+        text("What year was bread invented?", 50, 200)
+        fill(0, 0, 255)
+        textSize(30)
+        text("8000", 60, 275)
+        fill(0, 0, 255)
+        textSize(30)
+        text("BCE", 70, 300)
+        fill(0, 0, 255)
+        textSize(30)
+        text("8500", 187, 275)
+        fill(0, 0, 255)
+        textSize(30)
+        text("BCE", 197, 300)
+        fill(0, 0, 255)
+        textSize(30)
+        text("7000", 324, 275)
+        fill(0, 0, 255)
+        textSize(30)
+        text("BCE", 334, 300)
+        fill(0, 0, 255)
+        textSize(30)
+        text("1928", 455, 300)
+        rect(330, 305, 60, 80)
+        rect(193, 305, 60, 80)
+        rect(66, 305, 60, 80)
+        rect(462, 305, 60, 80)
+    
+    if scene == 9:
+        fill(255, 77, 77)
+        textSize(16)
+        text("The correct answer is...8000 BCE!", 175, 500)
+        rect(217, 305, 60, 80)
+        rect(83, 305, 60, 80)
+        rect(500, 305, 60, 80)
+        
+    if scene == 7:
+        fill(255, 77, 77)
+        textSize(16)
+        text("The correct answer is...1400!", 211, 500)
 
      
     
