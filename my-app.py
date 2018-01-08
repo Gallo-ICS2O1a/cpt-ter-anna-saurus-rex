@@ -130,11 +130,6 @@ def mousePressed():
         rect(217, 305, 60, 80)
         rect(83, 305, 60, 80)
         rect(500, 305, 60, 80)
-        
-    if scene == 7:
-        fill(255, 77, 77)
-        textSize(16)
-        text("The correct answer is...1400!", 211, 500)
 
      
     
