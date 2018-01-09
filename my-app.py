@@ -130,6 +130,35 @@ def mousePressed():
         rect(217, 305, 60, 80)
         rect(83, 305, 60, 80)
         rect(500, 305, 60, 80)
+        
+        if scene == 10:
+        background(255)
+        textSize(24)
+        fill(172, 83, 83)
+        text("What does durry mean in australian slang?", 50, 200)
+        fill(0, 0, 255)
+        textSize(30)
+        text("Toilet", 60, 275)
+        fill(0, 0, 255)
+        textSize(30)
+        fill(0, 0, 255)
+        textSize(25)
+        text("Cigerette", 187, 275)
+        fill(0, 0, 255)
+        textSize(25)
+        fill(0, 0, 255)
+        textSize(25)
+        text("Friend", 324, 285)
+        fill(0, 0, 255)
+        textSize(30)
+        fill(0, 0, 255)
+        textSize(30)
+        text("Bomb", 455, 300)
+        rect(330, 305, 60, 80)
+        rect(193, 305, 60, 80)
+        rect(66, 305, 60, 80)
+        rect(462, 305, 60, 80)
+    
 
      
     
