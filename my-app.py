@@ -1,30 +1,48 @@
 # Template for Processing sketches.
 scene = 1
 guess = 0
-restart = 1
-percentage = guess/restart * 100
 def setup():
     size(600, 600)
     
 def draw():
     if scene == 1:
         background(255)
+        beginning = color(0, 0, 204)
+        ending = color(153, 153, 255)
+        
+        for i in range(600):
+            stroke(lerpColor(beginning, ending, i/600.0))
+            line(0, i, width, i)
         textSize(48)
         text("The Impossible Trivia: ", 50, 200)
         fill(0)
         textSize(40)
         text("Slang, Food, and Music", 80, 300)
         fill(30)
-        textSize(16)
+        textSize(20)
         text("Click anywhere to start",211,500)
+        fill(0)
+        textSize(15)
+        text("How well do you know these impossible questions?", 50, 100)
+        fill(0)
+        textSize(15)
+        text("Will you beat your friends?", 350, 425)
 def mousePressed():
     global scene
     scene += 1
     if scene == 2:
         background(255)
+        fill(0)
+        textSize(30)
+        text("How to Play:", 200, 100)
+        fill(0)
+        textSize(30)
+    
+    if scene == 3:
+        background(255)
         textSize(30)
         fill(172, 83, 83)
-        text("How many Grammys did Kanye earn? ", 50, 200)
+        text("How many Grammys did Kanye earn?", 50, 200)
         fill(0, 0, 255)
         textSize(50)
         text("24", 68, 300)
@@ -42,12 +60,12 @@ def mousePressed():
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
     
-    if scene == 3:
+    if scene == 4:
         fill(255, 77, 77)
         textSize(16)
         text("The correct answer is.... 21!", 50, 500)
     
-    if scene == 4:
+    if scene == 5:
         background(255)
         textSize(30)
         fill(172, 83, 83)
@@ -69,12 +87,12 @@ def mousePressed():
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
     
-    if scene == 5:
+    if scene == 6:
         fill(255, 77, 77)
         textSize(16)
         text("The correct answer is...Tesfaye!", 190, 500)
         
-    if scene == 6:
+    if scene == 7:
         background(255)
         textSize(18)
         fill(172, 83, 83)
@@ -87,12 +105,12 @@ def mousePressed():
         rect(83, 305, 60, 80)
         rect(500, 305, 60, 80)
         
-    if scene == 7:
+    if scene == 8:
         fill(255, 77, 77)
         textSize(16)
         text("The correct answer is...1400!", 211, 500)
         
-    if scene == 8:
+    if scene == 9:
         background(255)
         textSize(30)
         fill(172, 83, 83)
@@ -123,16 +141,16 @@ def mousePressed():
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
     
-    if scene == 9:
+    if scene == 10:
         fill(255, 77, 77)
         textSize(16)
         text("The correct answer is...8000 BCE!", 175, 500)
        
-    if scene == 10:
+    if scene == 11:
         background(255)
         textSize(24)
         fill(172, 83, 83)
-        text("What does durry mean in australian slang?", 50, 200)
+        text("What does durry mean in Australian slang?", 50, 200)
         fill(0, 0, 255)
         textSize(30)
         text("Toilet", 60, 275)
