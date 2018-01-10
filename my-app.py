@@ -1,6 +1,7 @@
 # Template for Processing sketches.
 scene = 1
-guess = 0
+box1_loc = PVector(66, 305)
+box1_size = PVector(60, 80)
 def setup():
     size(600, 600)
     
@@ -29,6 +30,8 @@ def draw():
         text("Will you beat your friends?", 350, 425)
 def mousePressed():
     global scene
+    global box1_loc
+    global box1_size
     scene += 1
     if scene == 2:
         background(255)
@@ -69,13 +72,18 @@ def mousePressed():
         rect(193, 305, 60, 80)
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
+        
+    if mouseX >= box1_loc.x and mouseX <= box1_loc.x + box1_size.x:
+        if mouseY >= box1_loc.y and mouseX <= box1_size.y + box1_size.y:
+            fill(0)
+            rect(66, 305, 60, 80)
+            
+        else:
+            fill(255, 77, 77)
+            textSize(16)
+            text("The correct answer is.... 21!", 50, 500)
     
-    if scene == 4:
-        fill(255, 77, 77)
-        textSize(16)
-        text("The correct answer is.... 21!", 50, 500)
-    
-    if scene == 5:
+    if scene == 6:
         background(255)
         textSize(30)
         fill(172, 83, 83)
@@ -97,12 +105,12 @@ def mousePressed():
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
     
-    if scene == 6:
+    if scene == 7:
         fill(255, 77, 77)
         textSize(16)
         text("The correct answer is...Tesfaye!", 190, 500)
         
-    if scene == 7:
+    if scene == 8:
         background(255)
         textSize(18)
         fill(172, 83, 83)
@@ -115,12 +123,12 @@ def mousePressed():
         rect(83, 305, 60, 80)
         rect(500, 305, 60, 80)
         
-    if scene == 8:
+    if scene == 9:
         fill(255, 77, 77)
         textSize(16)
         text("The correct answer is...1400!", 211, 500)
         
-    if scene == 9:
+    if scene == 10:
         background(255)
         textSize(30)
         fill(172, 83, 83)
@@ -151,12 +159,12 @@ def mousePressed():
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
     
-    if scene == 10:
+    if scene == 11:
         fill(255, 77, 77)
         textSize(16)
         text("The correct answer is...8000 BCE!", 175, 500)
        
-    if scene == 11:
+    if scene == 12:
         background(255)
         textSize(24)
         fill(172, 83, 83)
@@ -183,7 +191,3 @@ def mousePressed():
         rect(193, 305, 60, 80)
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
-    
-
-     
-    
