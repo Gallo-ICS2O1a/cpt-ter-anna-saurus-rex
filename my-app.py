@@ -130,8 +130,8 @@ def mousePressed():
         rect(217, 305, 60, 80)
         rect(83, 305, 60, 80)
         rect(500, 305, 60, 80)
-        
-        if scene == 10:
+       
+    if scene == 10:
         background(255)
         textSize(24)
         fill(172, 83, 83)
