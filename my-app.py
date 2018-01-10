@@ -127,9 +127,6 @@ def mousePressed():
         fill(255, 77, 77)
         textSize(16)
         text("The correct answer is...8000 BCE!", 175, 500)
-        rect(217, 305, 60, 80)
-        rect(83, 305, 60, 80)
-        rect(500, 305, 60, 80)
        
     if scene == 10:
         background(255)
