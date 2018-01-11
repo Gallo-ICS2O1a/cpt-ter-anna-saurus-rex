@@ -78,7 +78,7 @@ def mousePressed():
             fill(0)
             rect(66, 305, 60, 80)
             
-        else:
+    if scene == 5:
             fill(255, 77, 77)
             textSize(16)
             text("The correct answer is.... 21!", 50, 500)
