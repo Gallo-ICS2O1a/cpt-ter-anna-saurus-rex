@@ -7,6 +7,8 @@ box2_loc = PVector(193, 305)
 box2_size = PVector(60, 80)
 box1_loc = PVector(66, 305)
 box1_size = PVector(60, 80)
+box3_loc = PVector(330, 305)
+box3_size = PVector(60, 80)
 def setup():
     size(600, 600)
     
@@ -19,19 +21,18 @@ def draw():
         for i in range(600):
             stroke(lerpColor(beginning, ending, i/600.0))
             line(0, i, width, i)
-        fill(201, 117, 102)
         textSize(48)
         text("The Impossible Trivia: ", 50, 200)
-        fill(201, 146, 232)
+        fill(0)
         textSize(40)
         text("Slang, Food, and Music", 80, 300)
-        fill(198, 65, 41)
+        fill(30)
         textSize(20)
         text("Click anywhere to start",211,500)
-        fill(226, 242, 135)
+        fill(0)
         textSize(15)
         text("How well do you know these impossible questions?", 50, 100)
-        fill(141, 231, 239)
+        fill(0)
         textSize(15)
         text("Will you beat your friends?", 350, 425)
 def mousePressed():
@@ -42,7 +43,10 @@ def mousePressed():
     global box1_loc
     global box1_size
     global box2_loc
-    global box2_size
+    global box2_size 
+    global box3_loc
+    global box3_size
+    
     scene += 1
     if scene == 2:
         background(255)
@@ -83,7 +87,6 @@ def mousePressed():
         rect(193, 305, 60, 80)
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
-        
     if scene == 4:
         if mouseX >= box4_loc.x and mouseX <= box4_loc.x + box4_size.x:
             if mouseY >= box4_loc.y and mouseY <= box4_loc.y + box4_size.y:
@@ -93,7 +96,31 @@ def mousePressed():
                 textSize(50)
                 text("21", 465, 300)
                 guess += 1
-            
+        elif mouseX >= box1_loc.x and mouseX <= box1_loc.x + box1_size.x:
+            if mouseY >= box1_loc.y and mouseY <= box1_loc.y + box1_size.y:
+                fill(255, 0, 0)
+                rect(66, 305, 60, 80)
+                fill(255, 0, 0)
+                textSize(50)
+                text("24", 68, 300)
+                guess -= 1 
+        elif mouseX >= box2_loc.x and mouseX <= box2_loc.x + box2_size.x:
+            if mouseY >= box2_loc.y and mouseY <= box2_loc.y + box2_size.y:
+                fill(255, 0, 0)
+                rect(193, 305, 60, 80)
+                fill(255, 0, 0)
+                textSize(50)
+                text("13", 190, 300)
+                guess -= 1 
+        elif mouseX >= box3_loc.x and mouseX <= box3_loc.x + box3_size.x:
+            if mouseY >= box3_loc.y and mouseY <= box3_loc.y + box3_size.y:
+                fill(255, 0, 0)
+                rect(330, 305, 60, 80)
+                fill(255, 0, 0)
+                textSize(50)
+                text("15", 330, 300)
+                guess -= 1 
+                
     if scene == 5:
             fill(255, 77, 77)
             textSize(16)
@@ -120,13 +147,47 @@ def mousePressed():
         rect(193, 305, 60, 80)
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
-    
+        
     if scene == 7:
+        if mouseX >= box2_loc.x and mouseX <= box2_loc.x + box2_size.x:
+            if mouseY >= box2_loc.y and mouseY <= box2_loc.y + box2_size.y:
+                fill(50, 205, 50)
+                rect(193, 305, 60, 80)
+                fill(50, 205, 50)
+                textSize(30)
+                text("Tesfaye", 177, 300)
+                guess += 1
+        elif mouseX >= box1_loc.x and mouseX <= box1_loc.x + box1_size.x:
+            if mouseY >= box1_loc.y and mouseY <= box1_loc.y + box1_size.y:
+                fill(255, 0, 0)
+                rect(66, 305, 60, 80)
+                fill(255, 0, 0)
+                textSize(30)
+                text("Tisfaye", 50, 300)
+                guess -= 1 
+        elif mouseX >= box4_loc.x and mouseX <= box4_loc.x + box4_size.x:
+            if mouseY >= box4_loc.y and mouseY <= box4_loc.y + box4_size.y:
+                fill(255, 0, 0)
+                rect(462, 305, 60, 80)
+                fill(255, 0, 0)
+                textSize(30)
+                text("Abel", 460, 300)
+                guess -= 1 
+        elif mouseX >= box3_loc.x and mouseX <= box3_loc.x + box3_size.x:
+            if mouseY >= box3_loc.y and mouseY <= box3_loc.y + box3_size.y:
+                fill(255, 0, 0)
+                rect(330, 305, 60, 80)
+                fill(255, 0, 0)
+                textSize(30)
+                text("Sunday", 314, 300)
+                guess -= 1 
+    
+    if scene == 8:
         fill(255, 77, 77)
         textSize(16)
         text("The correct answer is...Tesfaye!", 190, 500)
         
-    if scene == 8:
+    if scene == 9:
         background(255)
         textSize(18)
         fill(172, 83, 83)
@@ -139,12 +200,12 @@ def mousePressed():
         rect(83, 305, 60, 80)
         rect(500, 305, 60, 80)
         
-    if scene == 9:
+    if scene == 10:
         fill(255, 77, 77)
         textSize(16)
         text("The correct answer is...1400!", 211, 500)
         
-    if scene == 10:
+    if scene == 11:
         background(255)
         textSize(30)
         fill(172, 83, 83)
@@ -175,12 +236,12 @@ def mousePressed():
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
     
-    if scene == 11:
+    if scene == 12:
         fill(255, 77, 77)
         textSize(16)
         text("The correct answer is...8000 BCE!", 175, 500)
        
-    if scene == 12:
+    if scene == 13:
         background(255)
         textSize(24)
         fill(172, 83, 83)
