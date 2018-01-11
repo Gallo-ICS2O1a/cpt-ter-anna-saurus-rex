@@ -5,6 +5,8 @@ box4_loc = PVector(462, 305)
 box4_size = PVector(60, 80)
 box2_loc = PVector(193, 305)
 box2_size = PVector(60, 80)
+box1_loc = PVector(66, 305)
+box1_size = PVector(60, 80)
 def setup():
     size(600, 600)
     
