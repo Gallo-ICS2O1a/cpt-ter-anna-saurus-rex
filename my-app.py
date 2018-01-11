@@ -1,7 +1,10 @@
 # Template for Processing sketches.
 scene = 1
-box1_loc = PVector(66, 305)
-box1_size = PVector(60, 80)
+guess = 0
+box4_loc = PVector(462, 305)
+box4_size = PVector(60, 80)
+box2_loc = PVector(193, 305)
+box2_size = PVector(60, 80)
 def setup():
     size(600, 600)
     
@@ -30,9 +33,14 @@ def draw():
         textSize(15)
         text("Will you beat your friends?", 350, 425)
 def mousePressed():
+    global guess
     global scene
+    global box4_loc
+    global box4_size
     global box1_loc
     global box1_size
+    global box2_loc
+    global box2_size
     scene += 1
     if scene == 2:
         background(255)
@@ -74,10 +82,15 @@ def mousePressed():
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
         
-    if mouseX >= box1_loc.x and mouseX <= box1_loc.x + box1_size.x:
-        if mouseY >= box1_loc.y and mouseX <= box1_size.y + box1_size.y:
-            fill(0)
-            rect(66, 305, 60, 80)
+    if scene == 4:
+        if mouseX >= box1_loc.x and mouseX <= box1_loc.x + box1_size.x:
+            if mouseY >= box1_loc.y and mouseY <= box1_loc.y + box1_size.y:
+                fill(50, 205, 50)
+                rect(462, 305, 60, 80)
+                fill(50, 205, 50)
+                textSize(50)
+                text("21", 465, 300)
+                guess += 1
             
     if scene == 5:
             fill(255, 77, 77)
