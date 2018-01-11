@@ -85,8 +85,8 @@ def mousePressed():
         rect(462, 305, 60, 80)
         
     if scene == 4:
-        if mouseX >= box1_loc.x and mouseX <= box1_loc.x + box1_size.x:
-            if mouseY >= box1_loc.y and mouseY <= box1_loc.y + box1_size.y:
+        if mouseX >= box4_loc.x and mouseX <= box4_loc.x + box4_size.x:
+            if mouseY >= box4_loc.y and mouseY <= box4_loc.y + box4_size.y:
                 fill(50, 205, 50)
                 rect(462, 305, 60, 80)
                 fill(50, 205, 50)
