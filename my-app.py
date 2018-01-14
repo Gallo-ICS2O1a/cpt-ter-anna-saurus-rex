@@ -1,6 +1,7 @@
 # Template for Processing sketches.
 scene = 1
 guess = 0
+PFont = "Magneto-Bold"
 box1_loc = PVector(66, 305)
 box1_size = PVector(60, 80)
 box2_loc = PVector(193, 305)
@@ -17,21 +18,20 @@ def draw():
         background(255)
         beginning = color(0, 0, 204)
         ending = color(153, 153, 255)
+        
         for i in range(600):
             stroke(lerpColor(beginning, ending, i/600.0))
             line(0, i, width, i)
-            
-        title = createFont("monospace", 48)
+        title = createFont("Magneto-Bold", 48)
         textFont(title)
         fill(0)
         text("The Impossible Trivia: ", 50, 200)
-        subtitle = createFont("Calibri-BoldItalic", 40)
-        textFont(subtitle)
         fill(0)
+        textSize(40)
         text("Slang, Food, and Music", 80, 300)
         fill(30)
         textSize(20)
-        text("Click anywhere to start",200,500)
+        text("Click anywhere to start", 200, 500)
         fill(0)
         textSize(15)
         text("How well do you know these impossible questions?", 50, 100)
@@ -56,24 +56,33 @@ def mousePressed():
         fill(0)
         textSize(30)
         text("How to Play:", 200, 100)
-        fill(226,90,97)
+        fill(226, 90, 97)
         textSize(25)
-        text("Click on the box that you think is correct.",50,200)
-        fill(226,90,97)
+        text("Click on the box that you think is correct.",50, 150)
+        fill(226, 90, 97)
         textSize(25)
-        text("Points will be revealed at the end as well",50,225)
-        fill(226,90,97)
+        text("Points will be revealed at the end as well",50, 175)
+        fill(226, 90, 97)
         textSize(25)
-        text("as your ranking.",50,250)
-        fill(229,188,64)
+        text("as your ranking.",50, 200)
+        fill(226, 90, 97)
+        textSize(25)
+        text("Each correct answer is worth 25 points", 50, 250)
+        fill(266, 90, 97)
+        textSize(25)
+        text("Each incorrect answer is worth 20 points", 50, 300)
+        fill(229, 188, 64)
         textSize(60)
-        text("HAVE FUN!!!!!",75,350)
+        text("HAVE FUN!!!!!", 75, 400)
     
     if scene == 3:
         background(255)
         textSize(30)
         fill(172, 83, 83)
-        text("How many Grammys did Kanye earn?", 45, 200)
+        text("How many Grammys did", 115, 150)
+        fill(172, 83, 83)
+        textSize(30)
+        text("Kanye West earn?", 175, 190)
         fill(0, 0, 255)
         textSize(50)
         text("24", 68, 300)
@@ -86,6 +95,13 @@ def mousePressed():
         fill(0, 0, 255)
         textSize(50)
         text("21", 465, 300)
+        fill(255, 0, 0)
+        textSize(35)
+        text("Score:", 50, 50)
+        fill(255, 0, 0)
+        textSize(35)
+        text(guess, 150, 50)
+        fill(0, 0, 255)
         rect(330, 305, 60, 80)
         rect(193, 305, 60, 80)
         rect(66, 305, 60, 80)
@@ -98,7 +114,10 @@ def mousePressed():
                 fill(50, 205, 50)
                 textSize(50)
                 text("21", 465, 300)
-                guess += 1
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess += 25
         elif mouseX >= box1_loc.x and mouseX <= box1_loc.x + box1_size.x:
             if mouseY >= box1_loc.y and mouseY <= box1_loc.y + box1_size.y:
                 fill(255, 0, 0)
@@ -106,7 +125,10 @@ def mousePressed():
                 fill(255, 0, 0)
                 textSize(50)
                 text("24", 68, 300)
-                guess -= 1 
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess -= 20
         elif mouseX >= box2_loc.x and mouseX <= box2_loc.x + box2_size.x:
             if mouseY >= box2_loc.y and mouseY <= box2_loc.y + box2_size.y:
                 fill(255, 0, 0)
@@ -114,7 +136,10 @@ def mousePressed():
                 fill(255, 0, 0)
                 textSize(50)
                 text("13", 190, 300)
-                guess -= 1 
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess -= 20
         elif mouseX >= box3_loc.x and mouseX <= box3_loc.x + box3_size.x:
             if mouseY >= box3_loc.y and mouseY <= box3_loc.y + box3_size.y:
                 fill(255, 0, 0)
@@ -122,7 +147,10 @@ def mousePressed():
                 fill(255, 0, 0)
                 textSize(50)
                 text("15", 330, 300)
-                guess -= 1 
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess -= 20
                 
     if scene == 5:
             fill(255, 77, 77)
@@ -131,6 +159,12 @@ def mousePressed():
     
     if scene == 6:
         background(255)
+        fill(255, 0, 0)
+        textSize(35)
+        text("Score:", 50, 50)
+        fill(255, 0, 0)
+        textSize(35)
+        text(guess, 150, 50)
         textSize(30)
         fill(172, 83, 83)
         text("What's The Weeknd's last name? ", 50, 200)
@@ -159,7 +193,10 @@ def mousePressed():
                 fill(50, 205, 50)
                 textSize(30)
                 text("Tesfaye", 177, 300)
-                guess += 1
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess += 25
         elif mouseX >= box1_loc.x and mouseX <= box1_loc.x + box1_size.x:
             if mouseY >= box1_loc.y and mouseY <= box1_loc.y + box1_size.y:
                 fill(255, 0, 0)
@@ -167,7 +204,10 @@ def mousePressed():
                 fill(255, 0, 0)
                 textSize(30)
                 text("Tisfaye", 50, 300)
-                guess -= 1 
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess -= 20
         elif mouseX >= box4_loc.x and mouseX <= box4_loc.x + box4_size.x:
             if mouseY >= box4_loc.y and mouseY <= box4_loc.y + box4_size.y:
                 fill(255, 0, 0)
@@ -175,7 +215,10 @@ def mousePressed():
                 fill(255, 0, 0)
                 textSize(30)
                 text("Abel", 460, 300)
-                guess -= 1 
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess -= 20
         elif mouseX >= box3_loc.x and mouseX <= box3_loc.x + box3_size.x:
             if mouseY >= box3_loc.y and mouseY <= box3_loc.y + box3_size.y:
                 fill(255, 0, 0)
@@ -183,7 +226,10 @@ def mousePressed():
                 fill(255, 0, 0)
                 textSize(30)
                 text("Sunday", 314, 300)
-                guess -= 1 
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess -= 20
     
     if scene == 8:
         fill(255, 77, 77)
@@ -220,7 +266,10 @@ def mousePressed():
                 fill(50, 205, 50)
                 textSize(30)
                 text("1400", 190, 300)
-                guess += 1
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess += 25
         elif mouseX >= box1_loc.x and mouseX <= box1_loc.x + box1_size.x:
             if mouseY >= box1_loc.y and mouseY <= box1_loc.y + box1_size.y:
                 fill(255, 0, 0)
@@ -228,7 +277,10 @@ def mousePressed():
                 fill(255, 0, 0)
                 textSize(30)
                 text("5000", 63, 300)
-                guess -= 1 
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess -= 20
         elif mouseX >= box4_loc.x and mouseX <= box4_loc.x + box4_size.x:
             if mouseY >= box4_loc.y and mouseY <= box4_loc.y + box4_size.y:
                 fill(255, 0, 0)
@@ -236,7 +288,10 @@ def mousePressed():
                 fill(255, 0, 0)
                 textSize(30)
                 text("2500", 459, 300)
-                guess -= 1 
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess -= 20
         elif mouseX >= box3_loc.x and mouseX <= box3_loc.x + box3_size.x:
             if mouseY >= box3_loc.y and mouseY <= box3_loc.y + box3_size.y:
                 fill(255, 0, 0)
@@ -244,7 +299,10 @@ def mousePressed():
                 fill(255, 0, 0)
                 textSize(30)
                 text("2400", 327, 300)
-                guess -= 1 
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess -= 20
         
     if scene == 11:
         fill(255, 77, 77)
@@ -289,7 +347,10 @@ def mousePressed():
                 fill(50, 205, 50)
                 textSize(30)
                 text("BCE", 70, 300)
-                guess += 1
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess += 25
         elif mouseX >= box2_loc.x and mouseX <= box2_loc.x + box2_size.x:
             if mouseY >= box2_loc.y and mouseY <= box2_loc.y + box2_size.y:
                 fill(255, 0, 0)
@@ -297,7 +358,10 @@ def mousePressed():
                 fill(255, 0, 0)
                 textSize(30)
                 text("1375", 187, 300)
-                guess -= 1 
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess -= 20
         elif mouseX >= box4_loc.x and mouseX <= box4_loc.x + box4_size.x:
             if mouseY >= box4_loc.y and mouseY <= box4_loc.y + box4_size.y:
                 fill(255, 0, 0)
@@ -305,7 +369,10 @@ def mousePressed():
                 fill(255, 0, 0)
                 textSize(30)
                 text("1928", 455, 300)
-                guess -= 1 
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess -= 20
         elif mouseX >= box3_loc.x and mouseX <= box3_loc.x + box3_size.x:
             if mouseY >= box3_loc.y and mouseY <= box3_loc.y + box3_size.y:
                 fill(255, 0, 0)
@@ -316,7 +383,10 @@ def mousePressed():
                 fill(255, 0, 0)
                 textSize(30)
                 text("BCE", 334, 300)
-                guess -= 1 
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess -= 20
     if scene == 14:
         fill(255, 77, 77)
         textSize(20)
@@ -358,7 +428,10 @@ def mousePressed():
                 fill(50, 205, 50)
                 textSize(26)
                 text("Cigarette", 310, 300)
-                guess += 1
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess += 25
         elif mouseX >= box2_loc.x and mouseX <= box2_loc.x + box2_size.x:
             if mouseY >= box2_loc.y and mouseY <= box2_loc.y + box2_size.y:
                 fill(255, 0, 0)
@@ -366,7 +439,10 @@ def mousePressed():
                 fill(255, 0, 0)
                 textSize(30)
                 text("Friend", 180, 300)
-                guess -= 1 
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess -= 20
         elif mouseX >= box4_loc.x and mouseX <= box4_loc.x + box4_size.x:
             if mouseY >= box4_loc.y and mouseY <= box4_loc.y + box4_size.y:
                 fill(255, 0, 0)
@@ -374,7 +450,10 @@ def mousePressed():
                 fill(255, 0, 0)
                 textSize(30)
                 text("Bomb", 455, 300)
-                guess -= 1 
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess -= 20
         elif mouseX >= box1_loc.x and mouseX <= box1_loc.x + box1_size.x:
             if mouseY >= box1_loc.y and mouseY <= box1_loc.y + box1_size.y:
                 fill(255, 0, 0)
@@ -382,7 +461,10 @@ def mousePressed():
                 fill(255, 0, 0)
                 textSize(30)
                 text("Toilet", 55, 300)
-                guess -= 1 
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess -= 20
                 
     if scene == 17:
         fill(255, 77, 77)
