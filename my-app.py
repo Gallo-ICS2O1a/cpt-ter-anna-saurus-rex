@@ -397,7 +397,7 @@ def mousePressed():
                 
     if scene == 15:
         background(255)
-        textSize(21)
+        textSize(19)
         fill(172, 83, 83)
         text("How many McDonald's are there in Canada as of 2014?", 50, 200)
         fill(0, 0, 255)
