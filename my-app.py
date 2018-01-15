@@ -733,7 +733,7 @@ def mousePressed():
             text("Congradulations!", 195, 150)
             text("You have a score of", 120, 185)
             fill(255, 255, 51)
-            text(score, 400, 185)
+            text(score, 420, 185)
             fill(255)
             text("and a ranking of a", 175, 220)
             fill(255, 255, 51)
@@ -750,7 +750,7 @@ def mousePressed():
             text("Middle-class Einstein", 170, 360)
             fill(255, 153, 153)
             textSize(40)
-            text("Better Luck Next Time!!!", 110, 440)
+            text("Better Luck Next Time!!!", 90, 440)
         
         elif score >= 71 and score <= 140:
             nextstage = 140 - score
@@ -759,7 +759,7 @@ def mousePressed():
             text("Congradulations!", 195, 150)
             text("You have a score of", 120, 185)
             fill(255, 255, 51)
-            text(score, 400, 185)
+            text(score, 420, 185)
             fill(255)
             text("and a ranking of an", 175, 220)
             fill(255, 255, 51)
@@ -776,7 +776,7 @@ def mousePressed():
             text("Know-It-All Wizard", 170, 360)
             fill(255, 153, 153)
             textSize(40)
-            text("Better Luck Next Time!!!", 110, 440)
+            text("Better Luck Next Time!!!", 90, 440)
             
         elif score >= 141 and score <= 200:
             nextstage = 200 - score
@@ -785,7 +785,7 @@ def mousePressed():
             text("Congradulations!", 195, 150)
             text("You have a score of", 120, 185)
             fill(255, 255, 51)
-            text(score, 400, 185)
+            text(score, 420, 185)
             fill(255)
             text("and a ranking of a", 175, 220)
             fill(255, 255, 51)
