@@ -226,7 +226,7 @@ def mousePressed():
         
     if scene == 9:
         background(255)
-        textSize(25)
+        textSize(23)
         fill(172, 83, 83)
         text("Which star made an appearance in La La Land?", 50, 200)
         fill(0, 0, 255)
@@ -321,11 +321,11 @@ def mousePressed():
         
     if scene == 12:
         background(255)
-        textSize(30)
+        textSize(25)
         fill(172, 83, 83)
         text("How many weeks was 'Despacito' #1", 65, 150)
         fill(172, 83, 83)
-        textSize(30)
+        textSize(25)
         text("on the billboard top 100 chart?", 110, 190)
         fill(0, 0, 255)
         textSize(50)
