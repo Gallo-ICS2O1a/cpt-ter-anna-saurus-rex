@@ -782,7 +782,7 @@ def mousePressed():
             nextstage = 200 - score
             fill(255)
             textSize(30)
-            text("Congradulations!", 195, 150)
+            text("Congratulations!", 195, 150)
             text("You have a score of", 120, 185)
             fill(255, 255, 51)
             text(score, 420, 185)
