@@ -1,7 +1,6 @@
 # Template for Processing sketches.
 scene = 1
 guess = 0
-PFont = "Arial-Black"
 box1_loc = PVector(66, 305)
 box1_size = PVector(60, 80)
 box2_loc = PVector(193, 305)
@@ -11,8 +10,9 @@ box3_size = PVector(60, 80)
 box4_loc = PVector(462, 305)
 box4_size = PVector(60, 80)
 def setup():
+    global title
     size(600, 600)
-    
+    title = createFont("Serif.bold", 50)
 def draw():
     if scene == 1:
         background(255)
@@ -22,8 +22,7 @@ def draw():
         for i in range(600):
             stroke(lerpColor(beginning, ending, i/600.0))
             line(0, i, width, i)
-        title = createFont("Arial-Black", 50)
-        textFont(title)
+        textFont(title, 50)
         fill(51, 0, 51)
         text("The Impossible", 100, 200)
         fill(0)
@@ -718,7 +717,7 @@ def mousePressed():
                 textSize(18)
                 text("Click to continue", 430, 575)
                 guess -= 20
-                 if scene == 25:
+    if scene == 25:
         background(255)
         textSize(23)
         fill(172, 83, 83)
