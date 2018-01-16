@@ -718,6 +718,48 @@ def mousePressed():
                 textSize(18)
                 text("Click to continue", 430, 575)
                 guess -= 20
+                 if scene == 25:
+        background(255)
+        textSize(23)
+        fill(172, 83, 83)
+        text("When hippos are upset,their sweat turn grey", 50, 150)
+        textSize(30)
+        fill(0, 0, 255)
+        text("TRUE", 172, 275)
+        fill(0, 0, 255)
+        textSize(30)
+        text("FALSE", 308, 275)
+        rect(330, 305, 60, 80)
+        rect(193, 305, 60, 80)
+        
+    if scene == 25:
+        if mouseX >= box3_loc.x and mouseX <= box3_loc.x + box3_size.x:
+            if mouseY >= box3_loc.y and mouseY <= box3_loc.y + box3_size.y:
+                fill(50, 205, 50)
+                rect(330, 305, 60, 80)
+                fill(50, 205, 50)
+                textSize(30)
+                text("FALSE", 308, 275)
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess += 25
+        elif mouseX >= box2_loc.x and mouseX <= box2_loc.x + box2_size.x:
+            if mouseY >= box2_loc.y and mouseY <= box2_loc.y + box2_size.y:
+                fill(255, 0, 0)
+                rect(193, 305, 60, 80)
+                fill(255, 0, 0)
+                textSize(30)
+                text("TRUE", 157, 275)
+                fill(30)
+                textSize(18)
+                text("Click to continue", 430, 575)
+                guess -= 20
+
+    if scene == 26:
+        fill(255, 77, 77)
+        textSize(18)
+        text("The correct answer is... False. Their blood turns red!", 87, 500)
     if scene == 26:
         fill(255, 77, 77)
         textSize(20)
