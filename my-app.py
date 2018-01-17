@@ -10,9 +10,11 @@ box3_size = PVector(60, 80)
 box4_loc = PVector(462, 305)
 box4_size = PVector(60, 80)
 def setup():
+    global font
     global title
     size(600, 600)
     title = createFont("Serif.bold", 50)
+    font = createFont("URW Bookman L Light", 30)
 def draw():
     if scene == 1:
         background(255)
@@ -25,11 +27,11 @@ def draw():
         textFont(title, 50)
         fill(51, 0, 51)
         text("The Impossible", 100, 200)
-        fill(0)
+        fill(51, 0, 51)
         textSize(50)
         text("Trivia", 220, 300)
+        textFont(font, 20)
         fill(30)
-        textSize(20)
         text("Click anywhere to start", 200, 500)
         fill(255, 255, 102)
         textSize(15)
@@ -837,4 +839,3 @@ def mousePressed():
             fill(255, 153, 153)
             textSize(40)
             text("Amazing Job!!!", 170, 440)
-
