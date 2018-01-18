@@ -78,6 +78,8 @@ def mousePressed():
     
     if scene == 3:
         background(255)
+        fill(255)
+        rect(105, 140, 200, 100)
         textSize(30)
         fill(172, 83, 83)
         text("How many Grammys did", 115, 150)
