@@ -227,9 +227,10 @@ def mousePressed():
         
     if scene == 9:
         background(255)
-        textSize(23)
+        textSize(25)
         fill(172, 83, 83)
-        text("Which star made an appearance in La La Land?", 50, 200)
+        text("Which star made an", 175, 150)
+        text("appearance in La La Land?", 150, 180)
         fill(0, 0, 255)
         textSize(30)
         text("Will", 70, 275)
@@ -398,9 +399,10 @@ def mousePressed():
                 
     if scene == 15:
         background(255)
-        textSize(19)
+        textSize(25)
         fill(172, 83, 83)
-        text("How many McDonald's are there in Canada as of 2014?", 50, 200)
+        text("How many McDonald's locations", 110, 160)
+        text("are in Canada as of 2014?", 145, 200)
         fill(0, 0, 255)
         textSize(30)
         text("5000", 63, 300)
@@ -473,7 +475,7 @@ def mousePressed():
         background(255)
         textSize(30)
         fill(172, 83, 83)
-        text("What year was bread invented?", 50, 200)
+        text("What year was bread invented?", 60, 200)
         fill(0, 0, 255)
         textSize(30)
         text("8000", 60, 275)
@@ -719,21 +721,25 @@ def mousePressed():
                 textSize(18)
                 text("Click to continue", 430, 575)
                 guess -= 20
-    if scene == 25:
+    if scene == 26:
+        fill(255, 77, 77)
+        textSize(20)
+        text("The correct answer is... There you go!", 150, 500)
+    if scene == 27:
         background(255)
         textSize(23)
         fill(172, 83, 83)
-        text("When hippos are upset,their sweat turn grey", 50, 150)
+        text("When hippos are upset, their sweat turn grey.", 50, 150)
         textSize(30)
         fill(0, 0, 255)
-        text("TRUE", 172, 275)
+        text("TRUE", 180, 275)
         fill(0, 0, 255)
         textSize(30)
         text("FALSE", 308, 275)
         rect(330, 305, 60, 80)
         rect(193, 305, 60, 80)
         
-    if scene == 25:
+    if scene == 28:
         if mouseX >= box3_loc.x and mouseX <= box3_loc.x + box3_size.x:
             if mouseY >= box3_loc.y and mouseY <= box3_loc.y + box3_size.y:
                 fill(50, 205, 50)
@@ -751,22 +757,19 @@ def mousePressed():
                 rect(193, 305, 60, 80)
                 fill(255, 0, 0)
                 textSize(30)
-                text("TRUE", 157, 275)
+                text("TRUE", 180, 275)
                 fill(30)
                 textSize(18)
                 text("Click to continue", 430, 575)
                 guess -= 20
 
-    if scene == 26:
+    if scene == 29:
         fill(255, 77, 77)
         textSize(18)
         text("The correct answer is... False. Their blood turns red!", 87, 500)
-    if scene == 26:
-        fill(255, 77, 77)
-        textSize(20)
-        text("The correct answer is... There you go!", 150, 500)
+
         
-    if scene == 27:
+    if scene == 30:
         score = abs(guess)
         background(0, 128, 255)
         if score >= 0 and score <= 70:
