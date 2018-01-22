@@ -24,7 +24,7 @@ def draw():
         background(255)
         beginning = color(178, 102, 255)
         ending = color(102, 102, 255)
-
+        # Gradient
         for i in range(600):
             stroke(lerpColor(beginning, ending, i/600.0))
             line(0, i, width, i)
