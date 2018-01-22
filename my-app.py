@@ -88,9 +88,9 @@ def mousePressed():
         # question along with choices
         background(255)
         textSize(30)
-        fill(255)
+        fill(172, 83, 83)
         text("How many Grammys did", 115, 150)
-        fill(255)
+        fill(172, 83, 83)
         textSize(30)
         text("Kanye West earn?", 175, 190)
         fill(0, 0, 255)
