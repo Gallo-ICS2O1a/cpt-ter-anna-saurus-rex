@@ -9,21 +9,26 @@ box3_loc = PVector(330, 305)
 box3_size = PVector(60, 80)
 box4_loc = PVector(462, 305)
 box4_size = PVector(60, 80)
+
+
 def setup():
     global font
     global title
     size(600, 600)
     title = createFont("Serif.bold", 50)
     font = createFont("URW Bookman L Light", 30)
+
+
 def draw():
     if scene == 1:
         background(255)
         beginning = color(178, 102, 255)
         ending = color(102, 102, 255)
-        
+
         for i in range(600):
             stroke(lerpColor(beginning, ending, i/600.0))
             line(0, i, width, i)
+        # title page
         textFont(title, 50)
         fill(51, 0, 51)
         text("The Impossible", 100, 200)
@@ -39,6 +44,8 @@ def draw():
         fill(255, 255, 102)
         textSize(15)
         text("Will you beat your friends?", 350, 425)
+
+
 def mousePressed():
     global guess
     global scene
@@ -47,25 +54,26 @@ def mousePressed():
     global box1_loc
     global box1_size
     global box2_loc
-    global box2_size 
+    global box2_size
     global box3_loc
     global box3_size
-    
+
     scene += 1
     if scene == 2:
+        # instructions
         background(255)
         fill(0)
         textSize(30)
         text("How to Play:", 200, 100)
         fill(226, 90, 97)
         textSize(25)
-        text("Click on the box that you think is correct.",50, 150)
+        text("Click on the box that you think is correct.", 50, 150)
         fill(226, 90, 97)
         textSize(25)
-        text("Points will be revealed at the end as well",50, 175)
+        text("Points will be revealed at the end as well", 50, 175)
         fill(226, 90, 97)
         textSize(25)
-        text("as your ranking.",50, 200)
+        text("as your ranking.", 50, 200)
         fill(226, 90, 97)
         textSize(25)
         text("Each correct answer is worth 25 points", 50, 250)
@@ -75,13 +83,14 @@ def mousePressed():
         fill(229, 188, 64)
         textSize(60)
         text("HAVE FUN!!!!!", 75, 400)
-    
+
     if scene == 3:
+        # question along with choices
         background(255)
         textSize(30)
-        fill(172, 83, 83)
+        fill(255)
         text("How many Grammys did", 115, 150)
-        fill(172, 83, 83)
+        fill(255)
         textSize(30)
         text("Kanye West earn?", 175, 190)
         fill(0, 0, 255)
@@ -102,6 +111,8 @@ def mousePressed():
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
     if scene == 4:
+        # when mouse is pressed on a certain location
+        # It displays whether it is correct or not
         if mouseX >= box4_loc.x and mouseX <= box4_loc.x + box4_size.x:
             if mouseY >= box4_loc.y and mouseY <= box4_loc.y + box4_size.y:
                 fill(50, 205, 50)
@@ -146,13 +157,14 @@ def mousePressed():
                 textSize(18)
                 text("Click to continue", 430, 575)
                 guess -= 20
-                
+
     if scene == 5:
             fill(255, 77, 77)
             textSize(20)
             text("The correct answer is.... 21!", 150, 500)
-    
+
     if scene == 6:
+        # The second question
         background(255)
         textSize(30)
         fill(172, 83, 83)
@@ -173,8 +185,10 @@ def mousePressed():
         rect(193, 305, 60, 80)
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
-        
+
     if scene == 7:
+        # when the mouse is pressed on a certain location
+        # it displays whether it is correct or not
         if mouseX >= box2_loc.x and mouseX <= box2_loc.x + box2_size.x:
             if mouseY >= box2_loc.y and mouseY <= box2_loc.y + box2_size.y:
                 fill(50, 205, 50)
@@ -219,13 +233,14 @@ def mousePressed():
                 textSize(18)
                 text("Click to continue", 430, 575)
                 guess -= 20
-    
+
     if scene == 8:
         fill(255, 77, 77)
         textSize(20)
         text("The correct answer is...Tesfaye!", 150, 500)
-        
+
     if scene == 9:
+        # Third Question
         background(255)
         textSize(25)
         fill(172, 83, 83)
@@ -259,7 +274,10 @@ def mousePressed():
         rect(193, 305, 60, 80)
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
+
     if scene == 10:
+        # when the mouse is pressed on a certain location
+        # it displays whether it is correct or not
         if mouseX >= box3_loc.x and mouseX <= box3_loc.x + box3_size.x:
             if mouseY >= box3_loc.y and mouseY <= box3_loc.y + box3_size.y:
                 fill(50, 205, 50)
@@ -320,8 +338,9 @@ def mousePressed():
         fill(255, 77, 77)
         textSize(20)
         text("The correct answer is...John Legend!", 150, 500)
-        
+
     if scene == 12:
+        # Fourth Question
         background(255)
         textSize(25)
         fill(172, 83, 83)
@@ -346,7 +365,10 @@ def mousePressed():
         rect(193, 305, 60, 80)
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
+
     if scene == 13:
+        # when the mouse is pressed on a certain location
+        # it displays whether it is correct or not
         if mouseX >= box3_loc.x and mouseX <= box3_loc.x + box3_size.x:
             if mouseY >= box3_loc.y and mouseY <= box3_loc.y + box3_size.y:
                 fill(50, 205, 50)
@@ -391,13 +413,14 @@ def mousePressed():
                 textSize(18)
                 text("Click to continue", 430, 575)
                 guess -= 20
-                
+
     if scene == 14:
         fill(255, 77, 77)
         textSize(20)
         text("The correct answer is... 16!", 150, 500)
-                
+
     if scene == 15:
+        # Fifth Question
         background(255)
         textSize(25)
         fill(172, 83, 83)
@@ -419,8 +442,10 @@ def mousePressed():
         rect(193, 305, 60, 80)
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
-        
+
     if scene == 16:
+        # when the mouse is pressed on a certain location
+        # it displays whether it is correct or not
         if mouseX >= box2_loc.x and mouseX <= box2_loc.x + box2_size.x:
             if mouseY >= box2_loc.y and mouseY <= box2_loc.y + box2_size.y:
                 fill(50, 205, 50)
@@ -465,13 +490,14 @@ def mousePressed():
                 textSize(18)
                 text("Click to continue", 430, 575)
                 guess -= 20
-        
+
     if scene == 17:
         fill(255, 77, 77)
         textSize(20)
         text("The correct answer is...1400!", 150, 500)
-        
+
     if scene == 18:
+        # Sixth Question
         background(255)
         textSize(30)
         fill(172, 83, 83)
@@ -499,6 +525,8 @@ def mousePressed():
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
     if scene == 19:
+        # when the mouse is pressed on a certain location
+        # it displays whether it is correct or not
         if mouseX >= box1_loc.x and mouseX <= box1_loc.x + box1_size.x:
             if mouseY >= box1_loc.y and mouseY <= box1_loc.y + box1_size.y:
                 fill(50, 205, 50)
@@ -553,8 +581,9 @@ def mousePressed():
         fill(255, 77, 77)
         textSize(20)
         text("The correct answer is...8000 BCE!", 150, 500)
-       
+
     if scene == 21:
+        # Seventh Question
         background(255)
         textSize(24)
         fill(172, 83, 83)
@@ -581,8 +610,10 @@ def mousePressed():
         rect(193, 305, 60, 80)
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
-        
+
     if scene == 22:
+        # when the mouse is pressed on a certain location
+        # it displays whether it is correct or not
         if mouseX >= box3_loc.x and mouseX <= box3_loc.x + box3_size.x:
             if mouseY >= box3_loc.y and mouseY <= box3_loc.y + box3_size.y:
                 fill(50, 205, 50)
@@ -627,13 +658,14 @@ def mousePressed():
                 textSize(18)
                 text("Click to continue", 430, 575)
                 guess -= 20
-                
+
     if scene == 23:
         fill(255, 77, 77)
         textSize(20)
         text("The correct answer is...Cigarette!", 150, 500)
-        
+
     if scene == 24:
+        # Eigth Question
         background(255)
         textSize(30)
         fill(172, 83, 83)
@@ -666,8 +698,10 @@ def mousePressed():
         rect(193, 305, 60, 80)
         rect(66, 305, 60, 80)
         rect(462, 305, 60, 80)
-        
+
     if scene == 25:
+        # when the mouse is pressed on a certain location
+        # it displays whether it is correct or not
         if mouseX >= box4_loc.x and mouseX <= box4_loc.x + box4_size.x:
             if mouseY >= box4_loc.y and mouseY <= box4_loc.y + box4_size.y:
                 fill(50, 205, 50)
@@ -726,6 +760,7 @@ def mousePressed():
         textSize(20)
         text("The correct answer is... There you go!", 150, 500)
     if scene == 27:
+        # Ninth Question
         background(255)
         textSize(23)
         fill(172, 83, 83)
@@ -738,8 +773,10 @@ def mousePressed():
         text("FALSE", 308, 275)
         rect(330, 305, 60, 80)
         rect(193, 305, 60, 80)
-        
+
     if scene == 28:
+        # when the mouse is pressed on a certain location
+        # it displays whether it is correct or not
         if mouseX >= box3_loc.x and mouseX <= box3_loc.x + box3_size.x:
             if mouseY >= box3_loc.y and mouseY <= box3_loc.y + box3_size.y:
                 fill(50, 205, 50)
@@ -768,10 +805,10 @@ def mousePressed():
         textSize(18)
         text("The correct answer is... False. Their blood turns red!", 87, 500)
 
-        
     if scene == 30:
         score = abs(guess)
         background(0, 128, 255)
+# Displays score, lowest ranking, and points needed to improve to next ranking
         if score >= 0 and score <= 70:
             nextstage = 71 - score
             fill(255)
@@ -783,21 +820,22 @@ def mousePressed():
             fill(255)
             text("and a ranking of a", 175, 220)
             fill(255, 255, 51)
-            text("Beginner with training wheels", 120, 255) 
+            text("Beginner with training wheels", 120, 255)
             fill(255)
             textSize(25)
             text("Only", 60, 320)
             fill(255, 255, 51)
             text(nextstage, 130, 320)
             fill(255)
-            text("more points until you upgrade to", 170, 320) 
+            text("more points until you upgrade to", 170, 320)
             fill(255, 255, 51)
             textSize(30)
             text("Middle-class Einstein", 170, 360)
             fill(255, 153, 153)
             textSize(40)
             text("Better Luck Next Time!!!", 90, 440)
-        
+
+# Displays score, middle ranking, and points needed to improve to next ranking
         elif score >= 71 and score <= 140:
             nextstage = 140 - score
             fill(255)
@@ -809,21 +847,22 @@ def mousePressed():
             fill(255)
             text("and a ranking of an", 175, 220)
             fill(255, 255, 51)
-            text("Middle-class Einstein", 170, 255) 
+            text("Middle-class Einstein", 170, 255)
             fill(255)
             textSize(25)
             text("Only", 60, 320)
             fill(255, 255, 51)
             text(nextstage, 130, 320)
             fill(255)
-            text("more points until you upgrade to", 170, 320) 
+            text("more points until you upgrade to", 170, 320)
             fill(255, 255, 51)
             textSize(30)
             text("Know-It-All Wizard", 170, 360)
             fill(255, 153, 153)
             textSize(40)
             text("Better Luck Next Time!!!", 90, 440)
-            
+
+        # Displays the score and the highest ranking
         elif score >= 141 and score <= 200:
             nextstage = 200 - score
             fill(255)
@@ -835,7 +874,7 @@ def mousePressed():
             fill(255)
             text("and a ranking of a", 175, 220)
             fill(255, 255, 51)
-            text("Know-It-All Wizard", 170, 255) 
+            text("Know-It-All Wizard", 170, 255)
             fill(255)
             textSize(30)
             text("You have reached the FINAL ranking!", 50, 320)
