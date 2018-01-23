@@ -15,6 +15,7 @@ def setup():
     global font
     global title
     size(600, 600)
+    # Font
     title = createFont("Serif.bold", 50)
     font = createFont("URW Bookman L Light", 30)
 
